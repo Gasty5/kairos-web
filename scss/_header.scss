@@ -1,0 +1,22 @@
+header {
+background-color: $color-texto;
+color: white;
+padding: 10px;
+
+nav {
+    ul {
+    @include center;
+    list-style: none;
+    gap: 20px;
+    }
+
+    a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+        color: $color-acento;
+    }
+    }
+}
+}

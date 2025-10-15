@@ -1,0 +1,15 @@
+$colors: (facebook: #3b5998, instagram: #E4405F, linkedin: #0077B5);
+
+// Genero clases para íconos de redes
+@each $name, $color in $colors {
+.icon-#{$name} {
+    color: $color;
+    &:hover {
+    color: darken($color, 10%);
+    }
+}
+}
+$color-fondo: #f4f1ed;
+$color-texto: #2d2d2d;
+$color-acento: #e59d23;
+$font-base: 'Playfair Display', serif;

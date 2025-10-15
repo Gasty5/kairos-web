@@ -1,0 +1,6 @@
+# Archivos que NO quiero subir a GitHub
+node_modules/
+.sass-cache/
+.vscode/
+*.log
+.DS_Store
