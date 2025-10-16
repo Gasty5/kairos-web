@@ -1,5 +1,18 @@
+img, .gallery-grid img, .servicios img {
+max-width: 100%;
+height: auto;
+display: block;
+  object-fit: cover; /* mantiene recorte bonito si el contenedor es fijo */
+}
+
+/* Limitar altura en móviles para evitar imágenes gigantes */
 @media (max-width: 720px) {
-header nav ul { flex-direction: column; gap: 10px; text-align:center; }
-.hero-texto { font-size: 1.1rem; padding: 0 8px; }
-.servicios { grid-template-columns: 1fr; padding: 12px; }
+.gallery-grid img {
+    max-height: 220px;
+    width: 100%;
+}
+.hero img {
+    max-height: 260px;
+    width: 100%;
+}
 }
