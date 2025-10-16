@@ -1,7 +1,8 @@
 footer {
-background: linear-gradient(90deg, $primary-color, $accent-color);
-color: $text-color;
+background-color: $paper;
+color: $text;
 text-align: center;
 padding: 15px;
 font-size: 0.9rem;
+border-top: 1px solid lighten($accent, 15%);
 }

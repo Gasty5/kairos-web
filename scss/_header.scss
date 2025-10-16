@@ -1,26 +1,27 @@
 header {
-background-color: $primary-color;
-color: $text-color;
-padding: 10px;
+background-color: $accent;
+color: $text;
+padding: 10px 0;
 
-nav {
-    ul {
+.tituloencabezado {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+nav ul {
     display: flex;
     justify-content: center;
-    align-items: center;
-    list-style: none;
     gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    li {
-        a {
-        color: $text-color;
-        text-decoration: none;
-        @include transition(color);
-
-        &:hover {
-            color: $accent-color;
-        }
-        }
+    a {
+    color: $text;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+        color: darken($accent, 20%);
     }
     }
 }

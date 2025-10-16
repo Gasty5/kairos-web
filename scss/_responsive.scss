@@ -1,18 +1,40 @@
-img, .gallery-grid img, .servicios img {
+/* Imágenes generales */
+img,
+.gallery-grid img,
+.servicios img {
 max-width: 100%;
 height: auto;
 display: block;
-  object-fit: cover; /* mantiene recorte bonito si el contenedor es fijo */
+object-fit: cover;
 }
 
-/* Limitar altura en móviles para evitar imágenes gigantes */
+/* Ajustes para pantallas pequeñas (celulares) */
 @media (max-width: 720px) {
+  /* Hero (imagen principal) */
+.hero img {
+    max-height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+
+  /* Sección de servicios en 1 columna */
+.servicios {
+    grid-template-columns: 1fr;
+    padding: 10px;
+}
+
+.servicios img {
+    max-height: 200px;
+}
+
+  /* Galería */
 .gallery-grid img {
     max-height: 220px;
-    width: 100%;
 }
-.hero img {
-    max-height: 260px;
-    width: 100%;
+
+  /* Menú vertical */
+header nav ul {
+    flex-direction: column;
+    gap: 10px;
 }
 }

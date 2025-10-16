@@ -1,64 +1,52 @@
-.icon-facebook {
-  color: #3b5998;
-}
-.icon-facebook:hover {
-  color: rgb(44.7393364929, 67.4881516588, 115.2606635071);
-}
-
-.icon-instagram {
-  color: #E4405F;
-}
-.icon-instagram:hover {
-  color: rgb(211.1513761468, 29.8486238532, 64.119266055);
-}
-
-.icon-linkedin {
-  color: #0077B5;
-}
-.icon-linkedin:hover {
-  color: rgb(0, 85.4696132597, 130);
-}
-
+@charset "UTF-8";
 header {
-  background-color: #2d2d2d;
-  color: white;
-  padding: 10px;
+  background-color: #d6b992;
+  color: #3f3a35;
+  padding: 10px 0;
+}
+header .tituloencabezado {
+  text-align: center;
+  font-size: 1.8rem;
 }
 header nav ul {
   display: flex;
   justify-content: center;
-  align-items: center;
-  list-style: none;
   gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-header nav a {
-  color: white;
+header nav ul a {
+  color: #3f3a35;
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: bold;
 }
-header nav a:hover {
-  color: rgba(214, 146, 19, 0.5803921569);
+header nav ul a:hover {
+  color: rgb(186.12, 137.4, 71.88);
 }
 
 .hero {
   position: relative;
   text-align: center;
+  background-color: #f6f2ea;
 }
 .hero img {
   width: 100%;
   height: auto;
+  display: block;
 }
 .hero .hero-texto {
-  font-size: 1.8rem;
-  color: #2d2d2d;
-  margin-top: 10px;
-  animation: fadeIn 2s ease-in-out;
+  font-family: "Playfair Display", serif;
+  color: #3f3a35;
+  font-size: 1.6rem;
+  margin-top: 12px;
+  animation: fadeInUp 1s ease both;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -66,39 +54,146 @@ header nav a:hover {
   }
 }
 .card-base, .servicios article {
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #efe7dc;
   border-radius: 8px;
-  padding: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(63, 58, 53, 0.06);
+  color: #3f3a35;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .servicios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
+  padding: 20px;
 }
 .servicios article {
-  transition: transform 0.2s;
+  text-align: center;
 }
 .servicios article:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(63, 58, 53, 0.15);
+}
+.servicios article img {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto 8px;
+}
+.servicios article h3 {
+  margin: 8px 0 4px;
 }
 
 footer {
-  background: #2d2d2d;
-  color: white;
+  background-color: #efe7dc;
+  color: #3f3a35;
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
-  background: linear-gradient(90deg, #2d2d2d, rgba(214, 146, 19, 0.5803921569));
+  border-top: 1px solid rgb(234.91, 220.7, 201.59);
 }
 
-@media (max-width: 600px) {
+/* Imágenes generales */
+img,
+.gallery-grid img,
+.servicios img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Ajustes para pantallas pequeñas (celulares) */
+@media (max-width: 720px) {
+  /* Hero (imagen principal) */
+  .hero img {
+    max-height: 240px;
+    width: 100%;
+    object-fit: cover;
+  }
+  /* Sección de servicios en 1 columna */
   .servicios {
     grid-template-columns: 1fr;
-    gap: 12px;
+    padding: 10px;
   }
+  .servicios img {
+    max-height: 200px;
+  }
+  /* Galería */
+  .gallery-grid img {
+    max-height: 220px;
+  }
+  /* Menú vertical */
   header nav ul {
     flex-direction: column;
     gap: 10px;
   }
+}
+.hero {
+  position: relative;
+  text-align: center;
+  background-color: #f6f2ea;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero .hero-texto {
+  font-family: "Playfair Display", serif;
+  color: #3f3a35;
+  font-size: 1.6rem;
+  margin-top: 12px;
+  animation: fadeInUp 1s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* base */
+body {
+  background: #f6f2ea;
+  color: #3f3a35;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* header simple y centrado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: transparent;
+}
+header .tituloencabezado {
+  font-size: 1.6rem;
+  color: #3f3a35;
+}
+header nav ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav a {
+  color: #3f3a35;
+  text-decoration: none;
+}
+
+/* footer simple */
+footer {
+  text-align: center;
+  padding: 14px 10px;
+  color: #8a857d;
 }
