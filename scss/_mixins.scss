@@ -1,14 +1,13 @@
-@mixin center {
-display: flex;
-justify-content: center;
-align-items: center;
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+transition: $property $duration $timing;
 }
 
-@mixin boton($bg) {
-background: $bg;
-color: #fff;
-padding: 8px 12px;
-border-radius: 6px;
-transition: background .2s, transform .12s;
-&:hover { transform: translateY(-2px); background: darken($bg, 6%); }
+@mixin respond-to($breakpoint) {
+@if $breakpoint == mobile {
+    @media (max-width: #{$mobile}) { @content; }
+} @else if $breakpoint == tablet {
+    @media (max-width: #{$tablet}) { @content; }
+} @else if $breakpoint == desktop {
+    @media (min-width: #{$desktop}) { @content; }
+}
 }
