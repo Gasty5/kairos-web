@@ -5,3 +5,27 @@
 @import 'servicios';
 @import 'footer';
 @import 'responsive';
+
+/* base */
+body {
+background: $bg;
+color: $text;
+font-family: $font-family;
+margin:0;
+line-height:1.4;
+}
+
+/* header simple y centrado */
+header {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding: 10px 16px;
+background: transparent;
+.tituloencabezado { font-size:1.6rem; color:$text; }
+nav ul { display:flex; gap:16px; list-style:none; margin:0; padding:0; }
+nav a { color:$text; text-decoration:none; }
+}
+
+/* footer simple */
+footer { text-align:center; padding:14px 10px; color:$muted; }

@@ -1,11 +1,5 @@
-@include respond-to(mobile) {
-.servicios {
-    grid-template-columns: 1fr;
-    gap: 12px;
-}
-
-header nav ul {
-    flex-direction: column;
-    gap: 10px;
-}
+@media (max-width: 720px) {
+header nav ul { flex-direction: column; gap: 10px; text-align:center; }
+.hero-texto { font-size: 1.1rem; padding: 0 8px; }
+.servicios { grid-template-columns: 1fr; padding: 12px; }
 }
