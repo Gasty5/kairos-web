@@ -1,28 +1,34 @@
 @charset "UTF-8";
 header {
-  background-color: #d6b992;
-  color: #3f3a35;
-  padding: 10px 0;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 10px;
 }
 header .tituloencabezado {
   text-align: center;
+  font-family: "Playfair Display", serif;
   font-size: 1.8rem;
+  color: white;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header nav ul {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 10px 0;
+  gap: 20px;
 }
-header nav ul a {
-  color: #3f3a35;
+header nav ul li a {
   text-decoration: none;
-  font-weight: bold;
+  color: white;
+  transition: color 0.3s ease;
 }
-header nav ul a:hover {
-  color: rgb(186.12, 137.4, 71.88);
+header nav ul li a:hover {
+  color: rgba(214, 146, 19, 0.58);
 }
 
 .hero {
@@ -53,7 +59,7 @@ header nav ul a:hover {
     transform: translateY(0);
   }
 }
-.card-base, .servicios article {
+.card-base {
   background: #efe7dc;
   border-radius: 8px;
   padding: 14px;
@@ -69,29 +75,33 @@ header nav ul a:hover {
   padding: 20px;
 }
 .servicios article {
-  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .servicios article:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(63, 58, 53, 0.15);
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
-.servicios article img {
+.servicios img {
   max-width: 100%;
   border-radius: 6px;
   display: block;
   margin: 0 auto 8px;
 }
-.servicios article h3 {
+.servicios h3 {
   margin: 8px 0 4px;
 }
 
 footer {
-  background-color: #efe7dc;
-  color: #3f3a35;
+  background-color: #2d2d2d;
+  color: white;
   text-align: center;
-  padding: 15px;
+  padding: 15px 0;
   font-size: 0.9rem;
-  border-top: 1px solid rgb(234.91, 220.7, 201.59);
+  border-top: 2px solid rgba(214, 146, 19, 0.58);
+}
+footer img {
+  max-width: 150px;
+  margin-top: 10px;
 }
 
 /* Imágenes generales */
@@ -128,34 +138,6 @@ img,
   header nav ul {
     flex-direction: column;
     gap: 10px;
-  }
-}
-.hero {
-  position: relative;
-  text-align: center;
-  background-color: #f6f2ea;
-}
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.hero .hero-texto {
-  font-family: "Playfair Display", serif;
-  color: #3f3a35;
-  font-size: 1.6rem;
-  margin-top: 12px;
-  animation: fadeInUp 1s ease both;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 /* base */

@@ -1,27 +1,35 @@
 header {
-background-color: $accent;
-color: $text;
-padding: 10px 0;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 10px;
 
 .tituloencabezado {
     text-align: center;
+    font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
+    color: white;
 }
 
-nav ul {
+nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    align-items: center;
 
-    a {
-    color: $text;
-    text-decoration: none;
-    font-weight: bold;
-    &:hover {
-        color: darken($accent, 20%);
+    ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    gap: 20px;
+
+    li a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+
+        &:hover {
+        color: rgba(214, 146, 19, 0.58);
+        }
     }
     }
 }
