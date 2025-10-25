@@ -10,17 +10,17 @@ img {
 }
 
 .hero-texto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    background: rgba(0, 0, 0, 0.45);
-    padding: 12px 24px;
-    border-radius: 10px;
-    animation: fadeInUp 1s ease both;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+  color: #f0e4d0; // tono beige suave que combine con la página
+font-family: 'Playfair Display', serif;
+font-size: 2.4rem;
+letter-spacing: 1px;
+text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+  background: none; // sin fondo oscuro
+animation: fadeInUp 1s ease both;
 }
 }
 
