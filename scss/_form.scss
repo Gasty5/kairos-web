@@ -1,0 +1,55 @@
+.form-contacto {
+max-width: 400px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid lighten($text, 40%);
+    border-radius: 5px;
+    font-family: $font-family;
+    font-size: 1rem;
+}
+
+.btn-enviar {
+    background: $accent;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+    background: darken($accent, 8%);
+    }
+}
+}
+
+.mini-form {
+max-width: 500px;
+margin: 20px auto;
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid rgba(63,58,53,0.2);
+    border-radius: 6px;
+    font-family: 'Playfair Display', serif;
+}
+
+input[type="submit"] {
+    background-color: $accent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background .3s;
+    &:hover {
+    background-color: darken($accent, 10%);
+    }
+}
+}

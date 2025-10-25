@@ -1,12 +1,12 @@
 @import 'variables';
 @import 'mixins';
-@import 'header';
+@import 'layout';
 @import 'hero';
 @import 'servicios';
-@import 'footer';
+@import 'form';
 @import 'responsive';
 
-/* base */
+
 body {
 background: $bg;
 color: $text;
@@ -15,7 +15,7 @@ margin:0;
 line-height:1.4;
 }
 
-/* header simple y centrado */
+
 header {
 display:flex;
 justify-content:space-between;
@@ -27,5 +27,5 @@ nav ul { display:flex; gap:16px; list-style:none; margin:0; padding:0; }
 nav a { color:$text; text-decoration:none; }
 }
 
-/* footer simple */
+
 footer { text-align:center; padding:14px 10px; color:$muted; }

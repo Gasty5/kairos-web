@@ -1,5 +1,0 @@
-$socials: (facebook:#3b5998, instagram:#E4405F, linkedin:#0077B5);
-
-@each $name, $clr in $socials {
-.icon-#{$name} { color: $clr; transition: color .2s; &:hover { color: darken($clr, 10%);} }
-}

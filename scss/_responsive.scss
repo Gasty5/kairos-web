@@ -1,4 +1,4 @@
-/* Imágenes generales */
+
 img,
 .gallery-grid img,
 .servicios img {
@@ -8,16 +8,16 @@ display: block;
 object-fit: cover;
 }
 
-/* Ajustes para pantallas pequeñas (celulares) */
+
 @media (max-width: 720px) {
-  /* Hero (imagen principal) */
+  
 .hero img {
     max-height: 240px;
     width: 100%;
     object-fit: cover;
 }
 
-  /* Sección de servicios en 1 columna */
+  
 .servicios {
     grid-template-columns: 1fr;
     padding: 10px;
@@ -27,14 +27,36 @@ object-fit: cover;
     max-height: 200px;
 }
 
-  /* Galería */
+  
 .gallery-grid img {
     max-height: 220px;
 }
 
-  /* Menú vertical */
+  
 header nav ul {
     flex-direction: column;
     gap: 10px;
 }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  }
+
+  .hero img {
+    max-height: 260px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
 }
