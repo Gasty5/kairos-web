@@ -42,19 +42,52 @@ nav a {
 }
 }
 
-
 footer {
-background-color: $paper;
-color: $text;
+background: linear-gradient(90deg, #2d2d2d, rgba(214, 146, 19, 0.58));
+color: white;
 text-align: center;
-padding: 20px 10px;
+padding: 15px;
+font-size: 0.9rem;
 margin-top: 40px;
-border-top: 1px solid rgba(63,58,53,0.1);
 
 img {
     display: block;
     margin: 10px auto 0;
     width: 64px;
     height: auto;
+}
+}
+
+.acerca-de .contenido {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 30px;
+
+.texto {
+    flex: 1;
+    text-align: left;
+}
+
+.imagen {
+    flex: 1;
+    text-align: right;
+}
+
+.imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+}
+
+
+@media (max-width: 768px) {
+.acerca-de .contenido {
+    flex-direction: column;
+    text-align: center;
+
+    .imagen {
+    text-align: center;
+    }
 }
 }
