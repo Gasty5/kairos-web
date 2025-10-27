@@ -14,7 +14,9 @@
 <div class="tituloencabezado">
     <h1>Kairos Media Studio</h1>
 </div>
+
 <nav>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
     <ul>
     <li><a href="../index.html">Inicio</a></li>
     <li><a href="../pages/producto.html">Producto</a></li>
@@ -24,22 +26,43 @@
     </ul>
 </nav>
 </header>
-<main class="container my-5 acerca-de">
-<div class="contenido">
-    <div class="texto">
-    <h1 class="text-center mb-4">Acerca de Nosotros</h1>
-    <p class="lead">
-        Somos un equipo apasionado por el marketing digital, las redes sociales y la creación de contenido auténtico.
-        Nuestro objetivo es ayudar a marcas y emprendedores a conectar con su audiencia de forma genuina y efectiva.
+
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('nav ul');
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    toggle.classList.toggle('active');
+});
+
+
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+    menu.classList.remove('show');
+    toggle.classList.remove('active');
+    });
+});
+</script>
+
+<main class="acerca">
+<section class="contenido-acerca">
+    <div class="texto-acerca">
+    <h2>Sobre Kairos Media Studio</h2>
+    <p>
+        Somos un equipo apasionado por la comunicación visual y el marketing digital.
+        Buscamos impulsar marcas con identidad, creatividad y propósito.
     </p>
     <p>
-        Fundado en 2025, Kairos Media Studio nace con la misión de revolucionar la forma en que las empresas se comunican en el mundo digital.
+        En Kairos Media Studio combinamos diseño, estrategia y tecnología para
+        crear experiencias digitales efectivas y memorables.
     </p>
     </div>
-    <div class="imagen">
-    <img src="../assets/img/producto.webp" alt="Equipo de trabajo Kairos Media Studio">
+
+    <div class="imagen-acerca">
+    <img src="../assets/img/producto.webp" alt="Equipo creativo trabajando">
     </div>
-</div>
+</section>
 </main>
 
 <footer>

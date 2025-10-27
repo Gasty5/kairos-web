@@ -13,7 +13,9 @@
 <div class="tituloencabezado">
     <h1>Kairos Media Studio</h1>
 </div>
+
 <nav>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
     <ul>
     <li><a href="../index.html">Inicio</a></li>
     <li><a href="../pages/producto.html">Producto</a></li>
@@ -23,6 +25,25 @@
     </ul>
 </nav>
 </header>
+
+<script>
+
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('nav ul');
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    toggle.classList.toggle('active');
+});
+
+
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+    menu.classList.remove('show');
+    toggle.classList.remove('active');
+    });
+});
+</script>
 <main class="container">
     <h1>Servicios</h1>
 
