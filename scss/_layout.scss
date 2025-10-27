@@ -95,3 +95,52 @@ flex-direction: column;
 footer {
 margin-top: auto;
 }
+
+.contacto {
+background-color: #f3ede4;
+padding: 3rem 2rem;
+
+.contacto-container {
+    max-width: 500px;
+    margin-left: 5%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .input-group {
+    display: flex;
+    gap: 1rem;
+
+    input {
+        flex: 1;
+        padding: 0.8rem;
+        border: 1px solid #c7b7a3;
+        border-radius: 5px;
+    }
+    }
+
+    textarea {
+    resize: none;
+    padding: 0.8rem;
+    border: 1px solid #c7b7a3;
+    border-radius: 5px;
+    }
+
+    button {
+    background-color: #d7bfa8;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: #b89f88;
+    }
+    }
+}
+}
