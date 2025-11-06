@@ -49,9 +49,7 @@ header nav .menu-toggle {
 header nav .menu-toggle.active {
   transform: rotate(90deg);
 }
-header nav {
-  /* --- MODO CELULAR --- */
-}
+
 @media (max-width: 768px) {
   header nav .menu-toggle {
     display: block;
@@ -200,9 +198,7 @@ footer {
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-.acerca {
-  /* --- RESPONSIVE ACERCA --- */
-}
+
 @media (max-width: 768px) {
   .acerca .contenido-acerca {
     flex-direction: column;
@@ -557,9 +553,7 @@ footer {
     height: auto;
     border-radius: 10px;
   }
-  .contacto-grid {
-    /* --- GALERÍA --- */
-  }
+
   .contacto-grid .galeria-container {
     align-items: center;
     padding-left: 0;
