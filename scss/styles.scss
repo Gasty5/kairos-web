@@ -191,3 +191,41 @@ header {
     padding: 12px 24px;
 }
 }
+
+body,
+main,
+section,
+footer {
+background-color: #f6f2ea !important;
+}
+@media (max-width: 768px) {
+main.container {
+    padding: 1rem;
+}
+
+form {
+    width: 100%;
+}
+
+form .form-control,
+form textarea {
+    font-size: 0.95rem;
+}
+
+.contacto-page .contacto-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contacto-page .contacto-form {
+    width: 95%;
+    padding: 1.2rem;
+}
+
+.contacto-page .contacto-img img {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+}
+}
