@@ -5,34 +5,50 @@
 @import 'servicios';
 @import 'responsive';
 
-
+/* === ESTILOS GENERALES === */
 body {
 background: $bg;
 color: $text;
 font-family: $font-family;
-margin:0;
-line-height:1.4;
+margin: 0;
+line-height: 1.4;
 }
 
-
+/* === HEADER === */
 header {
-display:flex;
-justify-content:space-between;
-align-items:center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 padding: 10px 16px;
 background: transparent;
-.tituloencabezado { font-size:1.6rem; color:$text; }
-nav ul { display:flex; gap:16px; list-style:none; margin:0; padding:0; }
-nav a { color:$text; text-decoration:none; }
+
+.tituloencabezado {
+    font-size: 1.6rem;
+    color: $text;
 }
 
-
-footer { 
-    text-align:center; 
-    padding:14px 10px; 
-    color:$muted;
+nav ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+nav a {
+    color: $text;
+    text-decoration: none;
+}
+}
+
+/* === FOOTER === */
+footer {
+text-align: center;
+padding: 14px 10px;
+color: $muted;
+}
+
+/* === GALERÍA === */
 .galeria-container {
 display: flex;
 flex-direction: column;
@@ -66,6 +82,7 @@ img {
 }
 }
 
+/* === HEADER EN PANTALLAS PEQUEÑAS === */
 @media (max-width: 720px) {
 header {
     padding: 10px 20px;
@@ -81,7 +98,8 @@ nav li a {
     padding: 5px 6px;
 }
 }
-/* --- CONTACTO PAGE PERSONALIZADO --- */
+
+/* === CONTACTO PAGE === */
 .contacto-page {
 padding: 4rem 8%;
 background-color: #f6f2ea;
@@ -110,7 +128,7 @@ max-width: 500px;
 background-color: #efe7dc;
 padding: 2rem;
 border-radius: 10px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
 form {
     display: flex;
@@ -167,65 +185,87 @@ img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-.contacto-grid {
-    flex-direction: column;
-    align-items: center;
-}
-
-.contacto-form, .contacto-img {
-    max-width: 90%;
-}
-}
+/* === HEADER COLOR GENERAL === */
 header {
-background-color: $paper; 
+background-color: $paper;
 }
 
-@media (max-width: 768px) {
-header {
-    padding: 12px 24px;
-}
-}
-
+/* === FONDO GLOBAL UNIFICADO === */
 body,
 main,
 section,
 footer {
-background-color: #f6f2ea !important;
+background: linear-gradient(180deg, #f6f2ea 0%, #efe7dc 100%) !important;
 }
+
+/* === FOOTER GRADIENT === */
+footer {
+background: linear-gradient(180deg, #efe7dc 0%, #d9c5ae 100%) !important;
+}
+
+/* === AJUSTES RESPONSIVOS === */
 @media (max-width: 768px) {
 main.container {
     padding: 1rem;
 }
 
-form {
-    width: 100%;
+  /* --- FORMULARIO CENTRADO Y AJUSTADO --- */
+.contacto-page {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-form .form-control,
-form textarea {
-    font-size: 0.95rem;
-}
-
-.contacto-page .contacto-grid {
+.contacto-grid {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-}
+    width: 100%;
 
-.contacto-page .contacto-form {
+
+.contacto-form {
     width: 95%;
-    padding: 1.2rem;
+    max-width: 420px;
+    padding: 1.5rem;
+    margin: 0 auto;
 }
 
-.contacto-page .contacto-img img {
+.contacto-form form {
+    gap: 0.8rem;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    font-size: 0.95rem;
+}
+
+.contacto-img {
+    display: flex;
+    justify-content: center;
+}
+
+.contacto-img img {
     width: 90%;
     max-width: 350px;
     height: auto;
+    border-radius: 10px;
+}
+
+  /* --- GALERÍA --- */
+.galeria-container {
+    align-items: center;
+    padding-left: 0;
+}
+
+.galeria-container img {
+    width: 90%;
+    height: auto;
+    max-width: 350px;
+}
 }
 }
