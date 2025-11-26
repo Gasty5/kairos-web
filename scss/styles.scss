@@ -189,11 +189,11 @@ img {
 
 /* === FONDO GLOBAL === */
 body, main, section {
-background: linear-gradient(180deg, #f6f2ea 0%, #efe7dc 100%) !important;
+background: $bg;
 }
 
 footer {
-background: linear-gradient(180deg, #efe7dc 0%, #d9c5ae 100%) !important;
+background: linear-gradient(180deg, $bg-2 0%, $footer-bg 100%);
 }
 
 /* === AJUSTES RESPONSIVOS === */

@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-:root {
-  /* si querés centralizar colores, podés definirlos aquí */
-  --bg-1: #f6f2ea;
-  --bg-2: #efe7dc;
-  --text: #3f3a35;
-  --accent: #d6b992;
-}
 
 body {
   background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
@@ -19,7 +12,7 @@ body {
   min-height: 100vh;
 }
 
-/* Headings */
+
 main h1, main h2 {
   text-align: center;
   margin: 2rem 0;
@@ -43,7 +36,7 @@ header .tituloencabezado h1 {
   margin: 0;
 }
 
-/* nav base (mantengo tu layout y responsive controlado por tu JS) */
+
 header nav ul {
   display: flex;
   list-style: none;
@@ -52,7 +45,7 @@ header nav ul {
   padding: 0;
 }
 
-/* estilos base para links (unoificado, evita duplicados) */
+
 header nav a {
   color: var(--text);
   text-decoration: none;
@@ -64,7 +57,7 @@ header nav a:hover {
   color: var(--accent);
 }
 
-/* menu toggle (mobile) */
+
 header nav .menu-toggle {
   display: none;
   background: none;
@@ -74,7 +67,7 @@ header nav .menu-toggle {
   cursor: pointer;
 }
 
-/* mobile behavior */
+
 @media (max-width: 768px) {
   header {
     padding: 12px 24px;
@@ -113,7 +106,7 @@ header nav .menu-toggle {
   overflow: hidden;
 }
 .hero img {
-  display: block; /* evita gaps por img inline */
+  display: block; 
   width: 100%;
   height: 80vh;
   object-fit: cover;
@@ -212,11 +205,11 @@ header nav .menu-toggle {
 }
 
 .contacto {
-  /* estilo base si usas section.contacto en index */
+  
   padding: 2.5rem 0;
 }
 .contacto-container {
-  /* usado en index: centro el contenido */
+  
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -276,7 +269,7 @@ header nav .menu-toggle {
   object-fit: cover;
 }
 
-/* responsive ajuste contacto */
+
 @media (max-width: 768px) {
   .contacto-page {
     padding: 2rem 1rem;
@@ -309,11 +302,11 @@ header nav .menu-toggle {
 }
 .acerca .texto-acerca {
   flex: 1;
-  order: 1; /* texto a la izquierda */
+  order: 1; 
 }
 .acerca .imagen-acerca {
   flex: 1;
-  order: 2; /* imagen a la derecha */
+  order: 2; 
   display: flex;
   justify-content: center;
 }
@@ -330,16 +323,14 @@ header nav .menu-toggle {
     text-align: center;
   }
   .acerca .imagen-acerca {
-    order: 1; /* imagen arriba en móvil */
+    order: 1; 
   }
   .acerca .texto-acerca {
-    order: 2; /* texto abajo */
+    order: 2; 
   }
 }
 
-/* =========================
-  7. FOOTER
-   ========================= */
+
 footer {
   background: linear-gradient(180deg, var(--bg-2) 0%, #d9c5ae 100%);
   color: #3b3029;
@@ -358,10 +349,10 @@ footer img {
 
 main h1 { text-align: center; width: 100%; }
 @media (max-width: 768px) {
-  main h1 { text-align: center !important; margin: 1rem 0; }
+  main h1 { text-align: center; margin: 1rem 0; }
 }
 
-/* Override específico para nav links si bootstrap los colorea */
+
 header nav a.nav-link {
   color: var(--text);
   text-decoration: none;
@@ -391,18 +382,18 @@ nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
-  padding: 0 !important;
-  margin: 0 !important;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
-  color: inherit !important;
-  text-decoration: none !important;
-  font-family: inherit !important;
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
 }
 
 nav a:hover {
-  color: #000 !important; /* o el color que usabas antes */
+  color: #000; 
 }
 
 * { box-sizing: border-box; }
